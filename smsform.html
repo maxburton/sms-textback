@@ -1,0 +1,68 @@
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+<style>
+#header{
+	text-align: center;
+	font-size: 32;
+	padding-bottom: 5%;
+	font-family: 'Nunito', sans-serif;
+}
+table{
+    width: 100%;
+    border-collapse:collapse;
+	font-family: 'Nunito', sans-serif;
+	padding-bottom: 10px;
+}
+td, tr{
+	padding-right: 10px;
+	padding-left: 10px;
+}
+td{
+	width: 50%;
+}
+.pull-right{
+	text-align: right;
+	padding-bottom: 25px;
+}
+.centre{
+	text-align: center;
+}
+p{
+	font-size: 14px;
+	color: gray;
+}
+.radio{
+	font-family: 'Nunito', sans-serif;
+}
+#outer {
+  width: 100%;
+  text-align: center;
+}
+input[type=submit] {
+	font-family: 'Nunito', sans-serif;
+	font-size: 18px;
+}
+</style>
+</head>
+<body>
+<div id="header">Add Restaurant to SMS database</div>
+<div id="body">
+	<form action="smsadd.php" method="post">
+	<table>
+		<tr><td class="pull-right"><table><tr>Restaurant Name:</tr><tr><p>enter the entire restaurant name</p></tr></table></td><td valign="top"><input type="text" name="name"></td></tr>
+		<tr><td class="pull-right"><table><tr>iOS Link:</tr><tr><p>go to <a href="https://www.bitly.com" tabindex="-1" target="_blank">bitly.com</a> and generate a shortened URL to the App Store page</p></tr></table></td><td valign="top"><input type="text" name="ios"></td></tr>
+		<tr><td class="pull-right"><table><tr>Android Link:</tr><tr><p>go to <a href="https://www.bitly.com" tabindex="-1" target="_blank">bitly.com</a> and generate a shortened URL to the Play Store page</p></tr></table></td><td valign="top"><input type="text" name="android"></td></tr>
+	</table>
+	<div class="radio" id="outer">
+	<br>
+		<label><input type="radio" name="entryType" value="new" checked> New Entry </label>
+		<label><input type="radio" name="entryType" value="replace"> Replace Existing Entry </label>
+		<label><input type="radio" name="entryType" value="delete"> Delete Existing Entry </label>
+		<br><br><br>
+		<input type="submit" value="Submit">
+	</form>
+	</div>
+</div>
+</body>
+</html> 
