@@ -22,7 +22,6 @@ strong{
 <?php
 	$filename = "smslist.txt";
 	$responseMessages = array();
-	$fh = fopen($newfile, 'w') or die("Can't create file");
 	$lines = file($filename);
 	foreach ($lines as $line_num => $line) {
 		if(trim($line)){
